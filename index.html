@@ -219,29 +219,42 @@
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
-                <div id="AXI-SPI-Core" class="project no-image shadow-large">
+                
+				<div id="MIPS" class="project no-image shadow-large">
                     <div class="project-info">
-                        <h3><strong>AXI-SPI Core</strong></h3>
-                        <p>2020</p>
+                        <h3><strong>MIPS Processor on ZYNQ 7020 SOC</strong></h3>
+                        <p>2021</p>
                         <ul>
                             <li>
-                                Developed an FPGA core with a team in LTTS to interface between AXI4-Lite and SPI protocols in VHDL.
-                            </li>
-                            <li>
-                                Core was based on Xilinx Logicore AXI-SPI IP.
-                            </li>
-                            <li>
-                                Used two different clock domains, communicating through a FIFO.
-                            </li>
-                            <li>
-                                Developed testbenchs in VHDL and tested every component separatly and the system as a whole.
-                            </li>
+                                Design and implementation of a MIPS 32 processor on ARTY Z7-20 development board.
+							</li>
+							<li>
+								Project include two parts running on the ZYNQ Z7020 SOC:
+							</li>
+							<ol>
+								<li>
+									Hardware part, written in Verilog and running on the FPGA fabric.<br>
+									Processor is implemented on the FPGA and is structurally modeled.
+								</li>
+								<li>
+									Software part, written in C and running on ARM Cortex A9.<br>
+									Software is used to take user input through UART, parse it, and translate ASCII input into instructions that are transmitted to the FPGA via AXI.
+								</li>
+							</ol>
+							<li>
+								Future Plan: add support for resolving structural and data hazards in hardware.
+							</li>
                         </ul>
+                        <div class="row">
+                            <div class="column_MIPS">
+                                <img class="data-zoomable" src="images/flowchart.PNG" alt="MIPS_1" style="width:100%">
+                            </div>
+                        </div>
                     </div>
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-
+				
                 <div id="Wi-Fi_Enabled_AC_Thermostat" class="project no-image shadow-large">
                     <div class="project-info">
                         <h3><strong>Wi-Fi Enabled AC Thermostat</strong></h3>
@@ -281,43 +294,70 @@
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-
-                <a id="view-more-projects" href="#">View More Projects</a>
-                <div id="more-projects">
-                    <div id="Chore_tracker" class="project no-image shadow-large">
-                        <div class="project-info">
-                            <h3><strong>Chore Tracker using PIC16f88 MCU</strong></h3>
-                            <p>2018</p>
-                            <ul>
-                                <li>
-                                    Designed and programmed a system in C that is used to keep track of chores in the house and assigns them to a user
-                                </li>
-                                <li>
-                                    Programmed the micro controller PIC16f88 in C using MPLAB X IDE. Used a 16×2 LCD for output and 4 debounced push buttons for input. Designed a custom PCB for the project.
-                                </li>
-                                <li>
-                                    Used the tools provided by easyeda.com to create the schematic and layout of the circuit.
-                                </li>
-                            </ul>
-                            <div class="row">
-                                <div class="column_Chore">
-                                  <img class="data-zoomable" src="images/Chores_1.png" alt="Chores_1" style="width:100%">
-                                </div>
-                                <div class="column_Chore">
-                                  <img class="data-zoomable" src="images/Chores_2.png" alt="Chores_2" style="width:100%">
-                                </div>
-                                <div class="column_Chore">
-                                  <img class="data-zoomable" src="images/Chores_3.jpg" alt="Chores_3" style="width:100%">
-                                </div>
-                                <div class="column_Chore">
-                                  <img class="data-zoomable" src="images/Chores_4.jpg" alt="Chores_4" style="width:100%">
-                                </div>
+				
+				<div id="MineSweeper" class="project no-image shadow-large">
+                    <div class="project-info">
+                        <h3><strong>Mine Sweeper</strong></h3>
+                        <p>2019</p>
+                        <ul>
+                            <li>
+                                An attempt to replicate the old Windows minesweeper.
+                            </li>
+                            <li>
+                                The game is made using Pygame library <a href="https://www.pygame.org/docs/" target="_blank">https://www.pygame.org/docs/</a>
+                            </li>
+                            <li>
+                                Currently, the game only supports 9*9 grid with 10 mines. Future plan is to support varying sizes and number of mines.
+                            </li>
+                        </ul>
+                        <div class="row">
+                            <div class="column_AC">
+                                <img class="data-zoomable" src="images/New_game.png" alt="AC_1" style="width:100%">
                             </div>
+                            <div class="column_AC">
+                                <img class="data-zoomable" src="images/in_game.png" alt="AC_2" style="width:100%">
+                            </div>
+                            <div class="column_AC">
+                                <img class="data-zoomable" src="images/won_no_flags.png" alt="AC_3" style="width:100%">
+                            </div>
+                            <div class="column_AC">
+                                <img class="data-zoomable" src="images/won.png" alt="AC_4" style="width:100%">
+                            </div>
+                            <div class="column_AC">
+                                <img class="data-zoomable" src="images/lost.png" alt="AC_5" style="width:100%">
+                              </div>
                         </div>
-                        <!-- End .project-info -->
                     </div>
-                    <!-- End .project -->
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
 
+				<div id="AXI-SPI-Core" class="project no-image shadow-large">
+                    <div class="project-info">
+                        <h3><strong>AXI-SPI Core</strong></h3>
+                        <p>2020</p>
+                        <ul>
+                            <li>
+                                Developed an FPGA core with a team in LTTS to interface between AXI4-Lite and SPI protocols in VHDL.
+                            </li>
+                            <li>
+                                Core was based on Xilinx Logicore AXI-SPI IP.
+                            </li>
+                            <li>
+                                Used two different clock domains, communicating through a FIFO.
+                            </li>
+                            <li>
+                                Developed testbenchs in VHDL and tested every component separatly and the system as a whole.
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+				
+				<a id="view-more-projects" href="#">View More Projects</a>
+                <div id="more-projects">
+				
 					<div id="Implementation_of_Tree_Pattern_Matching" class="project no-image shadow-large">
                         <div class="project-info">
                             <h3><strong>Implementation of Tree Pattern Matching</strong></h3>
@@ -370,7 +410,40 @@
                                   <img class="data-zoomable" src="images/20180508_210023-768x576.jpg" alt="Tree_5" style="width:100%">
                                 </div>
                             </div>
-
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+					
+                    <div id="Chore_tracker" class="project no-image shadow-large">
+                        <div class="project-info">
+                            <h3><strong>Chore Tracker using PIC16f88 MCU</strong></h3>
+                            <p>2018</p>
+                            <ul>
+                                <li>
+                                    Designed and programmed a system in C that is used to keep track of chores in the house and assigns them to a user.
+                                </li>
+                                <li>
+                                    Programmed the PIC16f88 micro-controller in C using MPLAB X IDE. I used a 16×2 LCD for output and 4 debounced push buttons for input. I designed a custom PCB for the project.
+                                </li>
+                                <li>
+                                    Used the tools provided by easyeda.com for schematic capture, layout, and order of parts for the circuit.
+                                </li>
+                            </ul>
+                            <div class="row">
+                                <div class="column_Chore">
+                                  <img class="data-zoomable" src="images/Chores_1.png" alt="Chores_1" style="width:100%">
+                                </div>
+                                <div class="column_Chore">
+                                  <img class="data-zoomable" src="images/Chores_2.png" alt="Chores_2" style="width:100%">
+                                </div>
+                                <div class="column_Chore">
+                                  <img class="data-zoomable" src="images/Chores_3.jpg" alt="Chores_3" style="width:100%">
+                                </div>
+                                <div class="column_Chore">
+                                  <img class="data-zoomable" src="images/Chores_4.jpg" alt="Chores_4" style="width:100%">
+                                </div>
+                            </div>
                         </div>
                         <!-- End .project-info -->
                     </div>
